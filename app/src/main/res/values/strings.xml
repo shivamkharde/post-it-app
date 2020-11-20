@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Post !t</string>
+    <string name="title_feed">Feed</string>
+    <string name="title_profile">Profile</string>
+    <string name="login_here"><u>Login Here</u></string>
+    <string name="tag_line">Every picture needs a post</string>
+    <string name="registration_text">Registration</string>
+    <string name="full_name_field">Full Name</string>
+    <string name="username_field">Username</string>
+    <string name="email_field">Email</string>
+    <string name="password_field">Password</string>
+    <string name="confirm_password_field">Confirm Password</string>
+    <string name="register_now_btn">Register Now</string>
+    <string name="goto_login_text">Already have an account?</string>
+    <string name="login_text">Login</string>
+    <string name="login_btn">Login</string>
+    <string name="goto_register_text">Don\'t have an account?</string>
+    <string name="register_here"><u>Register Here</u></string>
+    <string name="select_a_picture">Select a picture</string>
+    <string name="add_a_description">Add a description</string>
+    <string name="post_it_btn">Post it!</string>
+    <string name="preview_text">preview :</string>
+    <string name="posts_title">Posts</string>
+</resources>
