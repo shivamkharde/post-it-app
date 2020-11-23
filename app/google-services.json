@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "444769752518",
+    "firebase_url": "https://post-it-3bef2.firebaseio.com",
+    "project_id": "post-it-3bef2",
+    "storage_bucket": "post-it-3bef2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444769752518:android:12638921f2561b59830ec7",
+        "android_client_info": {
+          "package_name": "com.shivamkharde.postit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444769752518-ekr4l9jdqpn6k5ufvefp8lf4trbe4ku0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCziDEIJagJkDMchkn79dwNwisG1HBohJ0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "444769752518-ekr4l9jdqpn6k5ufvefp8lf4trbe4ku0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -6,7 +6,10 @@ import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.shivamkharde.postit.ui.addpost.AddPostActivity;
+import com.shivamkharde.postit.ui.login.LoginActivity;
 import com.shivamkharde.postit.ui.register.RegisterActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,12 +23,21 @@ public class MainActivity extends AppCompatActivity {
 
 //    variable declaration
     private FloatingActionButton addNewPostBtn;
+
+//    firebase variable declaration
+    private FirebaseAuth pAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 //        force system dark mode to not affect to our app
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+//        variable initialization
+        addNewPostBtn = findViewById(R.id.add_post_btn);
+        pAuth = FirebaseAuth.getInstance();
+
         BottomNavigationView navView = findViewById(R.id.nav_view);
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -36,14 +48,6 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController,appBarConfiguration);
         NavigationUI.setupWithNavController(navView, navController);
 
-//        variable initialization
-        addNewPostBtn = findViewById(R.id.add_post_btn);
-        int register = 0;
-
-        if(register != 1){
-            Intent gotoRegisterActivity = new Intent(MainActivity.this, RegisterActivity.class);
-            startActivity(gotoRegisterActivity);
-        }
 
 //        adding on click listener on add post btn
         addNewPostBtn.setOnClickListener(new View.OnClickListener() {
@@ -55,4 +59,21 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+//    onStart method
+    @Override
+    protected void onStart() {
+        super.onStart();
+//        check if user is currently logged in or not
+        FirebaseUser currentUser = pAuth.getCurrentUser();
+        if(currentUser==null){
+            gotoLoginPage();
+        }
+    }
+
+    //    function is to go on register page
+    public void gotoLoginPage(){
+        Intent gotoLoginActivity = new Intent(MainActivity.this, LoginActivity.class);
+        startActivity(gotoLoginActivity);
+        finish();
+    }
 }
