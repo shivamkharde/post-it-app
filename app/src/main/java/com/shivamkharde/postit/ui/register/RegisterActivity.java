@@ -187,6 +187,7 @@ public class RegisterActivity extends AppCompatActivity {
         userDataObj.put("email",authTask.getResult().getUser().getEmail());
         userDataObj.put("fullName",sFullName);
         userDataObj.put("posts",0);
+        userDataObj.put("profile_image","default");
 
 //        storing data in collection
         pDb.collection("users")

@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="John Michael Green"
+        android:text="--"
         android:textColor="@color/cardview_dark_background"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -38,14 +38,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="@Greenjohn"
+        android:text="--"
         android:textColor="#B2000000"
         android:textSize="17sp"
+        app:layout_constraintBottom_toTopOf="@id/no_of_posts_card_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/full_name_of_user"
-        app:layout_constraintBottom_toTopOf="@id/no_of_posts_card_view"
-        />
+        app:layout_constraintTop_toBottomOf="@id/full_name_of_user" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/no_of_posts_card_view"
@@ -88,7 +87,7 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
                 android:gravity="center"
-                android:text="210"
+                android:text="---"
                 android:textColor="#B2000000"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"

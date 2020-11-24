@@ -212,7 +212,7 @@ public class AddPostActivity extends AppCompatActivity {
                 });
     }
 
-    //    this function is to clear the text fields
+//    this function is to clear the text fields
     public void clearTextFields(){
         imageFilePath = null;
         description.getText().clear();
@@ -223,7 +223,7 @@ public class AddPostActivity extends AppCompatActivity {
     public void chooseImageFromGallery(){
         Intent selectImageIntent = new Intent();
         selectImageIntent.setType("image/*");
-        selectImageIntent.setAction(Intent.ACTION_GET_CONTENT);
+        selectImageIntent.setAction(Intent.ACTION_PICK);
         startActivityForResult(Intent.createChooser(selectImageIntent,"Select a picture"),LOAD_IMAGE);
     }
 //    this function is to redirect user to login page
