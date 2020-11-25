@@ -157,6 +157,7 @@ public class AddPostActivity extends AppCompatActivity {
         postInfo.put("post_image",uri.toString());
         postInfo.put("post_description",sDescription);
         postInfo.put("post_likes",0);
+        postInfo.put("id",Calendar.getInstance().getTimeInMillis());
 
 //        store info in db
         pDb.collection("posts")
